@@ -71,9 +71,9 @@
     display:flex;
     flex-wrap: wrap;
     padding: 50px;
-    justify-content: space-around;
+
 }
-.main__car-item{
+.main__car-item-detail-link {
     display:flex;
     flex-direction: column;
     margin:20px;
@@ -83,4 +83,42 @@
     justify-content: space-around;
     background-color:white;
     border-radius: 40px;
+    color: black;
+
+
+}
+.main__car-item-img {
+    max-width: 250px;
+    max-header: 350px;
+    & img {
+        width: 100%;
+        header: 100%;
+        object-fit: initial;
+        }
+}
+.main__car-item-container {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.main__car-item-main-image {
+    flex: 1 0 60%; /* Большая фотография занимает 60% ширины контейнера */
+    margin-right: 10px;
+}
+.main__car-item-side-images {
+    flex: 1 0 40%; /* Маленькие фотографии занимают 40% ширины контейнера */
+    display: flex;
+    flex-direction: column;
+}
+.main__car-item-side-images img {
+    flex: 1;
+    margin-bottom: 10px;
+}
+.main__car-item-side-images img:last-child {
+    margin-bottom: 0; /* Убираем нижний отступ у последней фотографии */
+}
+.main__car-item-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }

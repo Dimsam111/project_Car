@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+{% load static%}
+
+{% block css%}
+<link rel="stylesheet" href="{% static 'css/car_add.css'%}">
+{% endblock css%}
+
+{% block main%}
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <button >Отправить</button>
+
+</form>
+{% endblock main%}
+

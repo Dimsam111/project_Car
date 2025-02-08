@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% load static%}
+
+{% block css%}
+<link rel="stylesheet" href="{% static 'css/car_detail.css'%}">
+{% endblock css%}
+
+{% block main %}
+<div class="conteiner_new" >
+    <div class="car_glav">
+        <img src="{{ car.image.url }}" alt="Small Image 3" content="" class="car_glav">
+    </div>
+    <div>
+        <a class="car_add_dop" href="{% url 'car_add' %}">
+            <img src="{{ car.image.url }}" alt="Small Image 3" class="car_one">
+            <img src="{{ car.image.url }}" alt="Small Image 3" class="car_one">
+            <img src="{{ car.image.url }}" alt="Small Image 3" class="car_one">
+    </div>
+    <p>Информация</p>
+</div>
+{% endblock main%}
