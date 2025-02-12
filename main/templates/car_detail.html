@@ -7,15 +7,28 @@
 
 {% block main %}
 <div class="conteiner_new" >
-    <div class="car_glav">
-        <img src="{{ car.image.url }}" alt="Small Image 3" content="" class="car_glav">
+    <div>
+        <title>Ваше авто</title>
     </div>
     <div>
-        <a class="car_add_dop" href="{% url 'car_add' %}">
-            <img src="{{ car.image.url }}" alt="Small Image 3" class="car_one">
-            <img src="{{ car.image.url }}" alt="Small Image 3" class="car_one">
-            <img src="{{ car.image.url }}" alt="Small Image 3" class="car_one">
+        <div>
+            <div>
+                <img src="{{ car.image.url }}" alt="">
+            </div>
+            <div>
+                {% for image in car.carimage_set.all %}
+                <img src="{{ image.picture.url }}" alt="">
+                {% endfor%}
+            </div>
+        </div>
+        <div>
+           <p>текст 1.1</p>
+           <p>текст 1.2</p>
+           <p>текст 1.3</p>
+        </div>
     </div>
-    <p>Информация</p>
+    <div>
+
+    </div>
 </div>
 {% endblock main%}

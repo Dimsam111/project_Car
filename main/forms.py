@@ -9,6 +9,6 @@ class CarAddForm(forms.Form):  # Создаем класс ImageForm, котор
         color = forms.CharField(max_length=100)
         description = forms.CharField(widget=forms.Textarea())
         annotation = forms.CharField(max_length=1000)
-
+        additional_img = forms.ImageField()
 
 

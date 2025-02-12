@@ -13,6 +13,7 @@ class CarImage(models.Model):
     picture = models.ImageField(upload_to="car")
     car = models.ForeignKey('Car', on_delete=models.CASCADE)
 
+
     def __str__(self):
         return self.car.model
 
